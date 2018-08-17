@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Configuration xmlns="http://www.croc.ru/sbannikov" ConsoleTrace="false">
+  <CommunityID>f770a61ed95d6f069f623372aa2317226828988cb1e3254a78190a434e12324fc0443b9768aa2d63c588f</CommunityID>
+  <AIToken>57f1df6e061d4ea381041e618fc0f9b1</AIToken>
+  <GroupId>csharpcroc</GroupId>
+  <Timer>1</Timer>
+  <HoursBeforeLesson>2</HoursBeforeLesson>
+  <State InitialState="None" Action="Register"  NextState="Register" Method="CheckUser" />
+  <State InitialState="None" Action="Document"  NextState="Register" Method="DocumentSent" />
+  <State InitialState="None" Action="Help" NextState="None" Method="SendHelp"/>
+  <State InitialState="None" Action="Welcome" NextState="None" Method="SendMessage"/>
+  <State InitialState="None" Action="Chat"  NextState="None" Method="SendMessage" />
+  <State InitialState="None" Action="Thanks"  NextState="None" Method="SendMessage" />
+  <State InitialState="None" Action="Bye" NextState="None" Method="SendMessage"/>
+  <State InitialState="None" Action="Unknown" NextState="None" Method="SendMessage" />
+  <State InitialState="None" Action="Email" NextState="None" Method="SendUnknown"/>
+  <State InitialState="Register" Action="Email" NextState="None" Method="RegisterUser" />
+  <State InitialState="None" Action="Checkin" NextState="None" Method="CheckinUser"/>
+  <State InitialState="None" Action="addLesson" NextState="AddLesson" Method="AddLesson"/>
+  <State InitialState="AddLesson" Action="addTopic" NextState="AddTopic" Method="addTopic"/>
+  <State InitialState="AddTopic" Action="addBeginTime" NextState="AddBeginTime" Method="AddBeginTime"/>
+  <State InitialState="AddBeginTime" Action="addDuration" NextState="None" Method="addDuration"/>
+</Configuration>
